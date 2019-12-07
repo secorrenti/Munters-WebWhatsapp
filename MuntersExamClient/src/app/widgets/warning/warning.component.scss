@@ -1,0 +1,37 @@
+
+.info-section {
+
+  height: 90px;
+  width: 420px;
+  background-color: #9de1fe;
+
+  img, .text-area {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  img {
+    margin: 22px 13px;
+    border-radius: 50%;
+  }
+
+  .text-area {
+    margin: 22px 0;
+    h3, label{
+      font-weight: 100;
+    }
+    h3 {
+      font-weight: 100;
+      font-size: 16px;
+      padding: 2px 0;
+    }
+    label{
+      font-weight: 100;
+      font-size: 14px;
+    }
+  }
+
+}
+
+
+

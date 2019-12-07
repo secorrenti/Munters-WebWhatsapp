@@ -1,0 +1,24 @@
+
+    <section class="menu-section">
+        <div class="efi-avatar"
+        [ngStyle]="{ 'background-image': 'url(assets/avatars/'+admin.avatar+'.jpg)'}"></div>
+        <label>שלום {{ admin.nickname }}</label>
+        <div class="btns">
+
+          <img (click)="getGeneral()" [ngClass]="{active: activeRoute}" title="דבר עם כולם יחד" src="assets/general.svg" alt="">
+
+          <img (click)="signout()" src="assets/logout.svg" alt="">
+
+        </div>
+    </section>
+
+
+    <app-warning></app-warning>
+
+
+    <section class="search-section">
+        <div class="input-cover">
+            <img src="assets/magn.png" alt="Magnifying Glass">
+            <input class="search-input" placeholder="חפש/י או התחיל/י צ'אט חדש">
+        </div>
+    </section>

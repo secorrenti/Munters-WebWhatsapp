@@ -1,0 +1,36 @@
+
+<div class="cover-section">
+
+  <div class="chat-section">
+
+    <div class="left-size">
+
+      <app-admin [admin]="admin"></app-admin>
+
+      <div class="users-scroll" *ngIf="users.length > 1;else noUsers">
+        <div *ngFor="let user of users" (click)="redirect(user)">
+          <app-users-links [ngClass]="{ 'conversation-active' : activeUser === user.connectionId }"
+            [user]="user"
+            *ngIf="user.connectionId !== admin.connectionId">
+          </app-users-links>
+        </div>
+      </div>
+
+
+      <ng-template #noUsers>
+        <span class="no-users">
+          NO USERS
+        </span>
+      </ng-template>
+
+    </div>
+
+    <div class="right-size">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</div>
+
+

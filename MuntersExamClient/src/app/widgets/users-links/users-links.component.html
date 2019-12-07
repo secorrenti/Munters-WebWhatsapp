@@ -1,0 +1,12 @@
+    <section class="avatar-section">
+      <img [src]="'assets/avatars/' + user.avatar + '.jpg'" alt="avatar">
+      <div class="text-area">
+        <h3>{{user.nickname}}</h3>
+        <label *ngIf="lastMessages">{{lastMessages.text}}</label>
+        <label *ngIf="!lastMessages" class="no-messages">לא נשלחו עדיין הודעות למשתמש זה.</label>
+      </div>
+      <div class="info-area" *ngIf="lastMessages">
+        <h3 class="time">{{lastMessages.id | date: 'hh:mm'}}</h3>
+        <label *ngIf="unread" class="counter">{{unread}}</label>
+      </div>
+    </section>

@@ -1,0 +1,15 @@
+:host {
+
+  display: block;
+
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    display: block;
+    background-color: #009688;
+    height: 127px;
+  }
+
+
+}

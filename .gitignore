@@ -1,0 +1,52 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/MuntersExamClient/dist
+/MuntersExamClient/tmp
+/MuntersExamClient/out-tsc
+# Only exists if Bazel was run
+/MuntersExamClient/bazel-out
+
+# dependencies
+/MuntersExamClient/node_modules
+
+# profiling files
+/MuntersExamClient/chrome-profiler-events.json
+/MuntersExamClient/speed-measure-plugin.json
+
+# IDEs and editors
+/MuntersExamClient/.idea
+/MuntersExamClient/.project
+/MuntersExamClient/.classpath
+/MuntersExamClient/.c9/
+/MuntersExamClient/*.launch
+/MuntersExamClient/.settings/
+/MuntersExamClient/*.sublime-workspace
+
+# IDE - VSCode
+/MuntersExamClient/.vscode/*
+/MuntersExamClient/!.vscode/settings.json
+/MuntersExamClient/!.vscode/tasks.json
+/MuntersExamClient/!.vscode/launch.json
+/MuntersExamClient/!.vscode/extensions.json
+/MuntersExamClient/.history/*
+
+# misc
+/MuntersExamClient/.sass-cache
+/MuntersExamClient/connect.lock
+/MuntersExamClient/coverage
+/MuntersExamClient/libpeerconnection.log
+/MuntersExamClient/npm-debug.log
+/MuntersExamClient/yarn-error.log
+/MuntersExamClient/testem.log
+/MuntersExamClient/typings
+
+# System Files
+/MuntersExamClient/.DS_Store
+/MuntersExamClient/Thumbs.db
+.vs
+
+MuntersExamServer/obj
+MuntersExamServer/bin
+
+

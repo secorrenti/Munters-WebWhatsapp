@@ -1,0 +1,143 @@
+:host {
+
+  .user {
+    background-color: #eeeeee;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .avatar {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin: 10px 15px;
+      background-size: 100%;
+      display: inline-block;
+    }
+
+    label {
+      font-size: 18px;
+    }
+
+    .close {
+      width: 66px;
+      height: 50px;
+      padding: 17px;
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+    }
+  }
+
+  .messages {
+    height: calc(100% - 111px);
+    padding: 20px;
+    background-color: #e5ddd5;
+    position: relative;
+    overflow: auto;
+    background-image: url('../../../../assets/whatsapp-back.png');
+
+    &>div {
+      z-index: 1;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0px 0;
+      overflow: hidden;
+      margin: 5px 0;
+
+      &.mine {
+        align-self: flex-end;
+        text-align: left;
+        justify-content: flex-end;
+
+        label {
+          background-color: #dcf8c6;
+
+          &::before {
+            left: -6px;
+            right: unset;
+            background: #dcf8c6;
+            box-shadow: -1px 2px 2px #d1d1d1;
+          }
+        }
+      }
+
+      label {
+        display: inline-block;
+        background: white;
+        margin: -2px 38px;
+        padding: 10px 12px 10px 60px;
+        border-radius: 10px;
+        box-shadow: 0 1px 2px #d1d1d1;
+        color: #2b2b2b;
+        position: relative;
+        min-width: 180px;
+        max-width: 50%;
+        text-align: right;
+        color:#4e4e4e;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: -6px;
+          top: 3px;
+          width: 13px;
+          height: 13px;
+          transform: rotate(44deg) translate(-4px, -3px);
+          border-radius: 2px;
+          box-shadow: 2px -2px 2px #d1d1d1;
+          background: white;
+        }
+
+        span {
+          position: absolute;
+          color: rgba(0, 0, 0, .45);
+          font-size: 12px;
+          left: 26px;
+          bottom: 5px;
+          &.not-mine {
+            left: 8px;
+          }
+        }
+
+        .to-read {
+          display: block;
+          position: absolute;
+          color: rgba(0, 0, 0, 0.45);
+          font-size: 12px;
+          left: 2px;
+          bottom: 0;
+          width: 28px;
+          height: 28px;
+          &.readed {
+            &::before,
+            &::after {
+              border-bottom: solid 2px #9de1fe;
+              border-right: solid 2px #9de1fe;
+            }
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 4px;
+            height: 10px;
+            display: block;
+            border-bottom: solid 2px #b3b3b3;
+            border-right: solid 2px #b3b3b3;
+            transform: rotate(36deg) translate(-7px, 14px);
+          }
+
+          &::after {
+            transform: rotate(36deg) translate(-3px, 11px);
+          }
+
+        }
+      }
+    }
+  }
+}

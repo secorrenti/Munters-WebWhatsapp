@@ -1,0 +1,32 @@
+
+<div class="login-card">
+
+  <div class="cart">
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
+
+        <div>
+            <label> שם משתמש: </label>
+            <input formControlName="nickname">
+        </div>
+
+        <img *ngIf="myForm.get('avatar').value;else noAvatar"
+          [src]="'assets/avatars/' + myForm.get('avatar').value + '.jpg'"
+          alt="avatar">
+
+        <ng-template #noAvatar>
+          <div>
+              <button type="button" (click)="openImages()"> בחר תמונה</button>
+          </div>
+        </ng-template>
+
+        <button  type="submit" class="btn btn-primary"
+          [disabled]="!myForm.valid">התחבר</button>
+
+      </form>
+
+      <app-contact></app-contact>
+  </div>
+
+</div>
+

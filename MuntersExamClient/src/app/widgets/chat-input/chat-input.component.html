@@ -1,0 +1,13 @@
+
+
+
+<section class="input-section" [formGroup]="myForm">
+    <div class="input-cover">
+      <input type="text" class="search-input" formControlName="messageText"
+        (keypress)="keypress($event)"
+        placeholder="הקלד/י הודעה">
+    </div>
+    <img src="assets/send.svg" (click)="send()"
+      [ngClass]="{valid: myForm.valid}"
+    alt="Send Btn">
+</section>

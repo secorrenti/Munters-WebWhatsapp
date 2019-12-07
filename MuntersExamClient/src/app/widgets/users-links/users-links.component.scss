@@ -1,0 +1,79 @@
+:host {
+
+  .avatar-section {
+    height: 72px;
+    width: 100%;
+    background-color: white;
+    border-top: solid 1px #f7f7f7;
+    border-bottom: solid 1px #f7f7f7;
+    cursor: pointer;
+
+    &>img {
+      margin: 10px 13px;
+      border-radius: 50%;
+      width: 50px;
+    }
+
+    .text-area {
+      display: inline-block;
+      vertical-align: top;
+      label {
+        width: 280px;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .no-messages {
+        font-style: italic;
+        color: #f6baba;
+      }
+    }
+
+    .text-area,
+    .info-area {
+      margin: 12px 0;
+      max-width: 334px;
+    }
+
+    h3,
+    label {
+      font-weight: 100;
+    }
+
+    h3 {
+      font-size: 16px;
+      padding: 4px 0;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+
+    .info-area {
+      float: left;
+      padding: 0 13px;
+
+      h3 {
+        font-size: 13px;
+        color: #c5c5c5;
+      }
+
+      label {
+        color: white;
+        background-color: #09d261;
+        padding: 2px 4px;
+        border-radius: 15px;
+        min-width: 18px;
+        text-align: center;
+        height: 20px;
+        font-weight: 100;
+        float: left;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+    }
+  }
+}

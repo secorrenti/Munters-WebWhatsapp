@@ -1,0 +1,21 @@
+
+
+
+<div class="user" >
+    <div class="avatar"
+    [ngStyle]="{ 'background-image': 'url(assets/avatars/'+guest.avatar+'.jpg)'}"></div>
+  <label>
+    כעת הנך מתכתב עם {{guest.nickname}}
+  </label>
+</div>
+<div class="messages" #page>
+  <div *ngFor="let message of messages"
+    [ngClass]="{'mine': message.sender === admin.connectionId}">
+    <label>
+      {{message.text}}
+      <span [ngClass]="{'not-mine': message.sender !== admin.connectionId}">{{message.id | date: 'hh:mm'}}</span>
+      <span class="to-read" [ngClass]="{readed: message.isReaded}" *ngIf="message.sender === admin.connectionId"></span>
+    </label>
+  </div>
+</div>
+<app-chat-input (whenSended)="addMessage($event)"></app-chat-input>
